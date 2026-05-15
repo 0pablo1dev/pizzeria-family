@@ -1402,10 +1402,18 @@ body { cursor: none; }
   .hero-horario {
     position: static;
     transform: none;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
   }
 
-  .horario-inner { max-width: 320px; margin: 0 auto; }
+  .horario-inner {
+    max-width: 320px;
+    width: 100%;
+    /* en móvil hacemos el grid horizontal para que quepa mejor */
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 
   .salsa-star-inner { grid-template-columns: 1fr; gap: 3rem; }
 
@@ -1434,7 +1442,29 @@ body { cursor: none; }
 @media (max-width: 600px) {
   :root { --checker-size: 50px; }
 
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem 1.5rem 3rem;
+  }
+
+  .hero-content { width: 100%; }
+
+  .hero-horario {
+    width: 100%;
+    margin-top: 1.8rem;
+  }
+
+  .horario-inner {
+    max-width: 100%;
+    border-left: none;
+    border-right: none;
+  }
+
   .hero-title-line { font-size: clamp(3rem, 18vw, 5rem); }
+
+  .hero-ctas { flex-direction: column; align-items: center; }
+  .hero-ctas .btn { width: 100%; max-width: 300px; text-align: center; }
 
   .galeria-grid {
     grid-template-columns: 1fr;
@@ -1450,5 +1480,5 @@ body { cursor: none; }
   .side-menu { width: 100%; }
 
   body { cursor: auto; }
-  .cursor, .cursor-follower { display: none; }
+  #pizza-cursor { display: none; }
 }

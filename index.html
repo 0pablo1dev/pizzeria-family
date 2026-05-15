@@ -11,9 +11,8 @@
 </head>
 <body>
 
-  <!-- ══════════ CURSOR PERSONALIZADO ══════════ -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursorFollower"></div>
+  <!-- ══════════ CURSOR PIZZA ══════════ -->
+  <div id="pizza-cursor">🍕</div>
 
   <!-- ══════════ LOADER ══════════ -->
   <div class="loader" id="loader">
@@ -136,11 +135,19 @@
 
   <div class="marquee-wrap">
     <div class="marquee-track">
-      <span>🍕 PIZZA</span><span>🍔 BURGER</span><span>🥖 BAGUETTE</span>
-      <span>🌭 PERRITO</span><span>🥪 MONTADITO</span><span>🍟 PATATAS</span>
-      <span>🥤 BEBIDAS</span><span>🍕 PIZZA</span><span>🍔 BURGER</span>
-      <span>🥖 BAGUETTE</span><span>🌭 PERRITO</span><span>🥪 MONTADITO</span>
-      <span>🍟 PATATAS</span><span>🥤 BEBIDAS</span>
+      <span>🍕 PIZZAS ARTESANAS</span><span>🍔 HAMBURGUESAS</span><span>🥖 BAGUETTES</span>
+      <span>🌭 PERRITOS</span><span>🥪 MONTADITOS</span><span>🫓 SANDWICHES</span>
+      <span>🍟 PATATAS FRITAS</span><span>🫔 DURUM KEBABS</span><span>🌮 PLATOS MEXICANOS</span>
+      <span>🥩 CHURRASCOS</span><span>🥗 ENSALADAS</span><span>🍽️ PLATOS COMBINADOS</span>
+      <span>🧒 MENÚS INFANTILES</span><span>🍰 POSTRES</span><span>🥤 BEBIDAS</span>
+      <span>🫙 SALSAS CASERAS</span><span>🤌 PARA PICAR</span>
+      <!-- duplicado para loop infinito -->
+      <span>🍕 PIZZAS ARTESANAS</span><span>🍔 HAMBURGUESAS</span><span>🥖 BAGUETTES</span>
+      <span>🌭 PERRITOS</span><span>🥪 MONTADITOS</span><span>🫓 SANDWICHES</span>
+      <span>🍟 PATATAS FRITAS</span><span>🫔 DURUM KEBABS</span><span>🌮 PLATOS MEXICANOS</span>
+      <span>🥩 CHURRASCOS</span><span>🥗 ENSALADAS</span><span>🍽️ PLATOS COMBINADOS</span>
+      <span>🧒 MENÚS INFANTILES</span><span>🍰 POSTRES</span><span>🥤 BEBIDAS</span>
+      <span>🫙 SALSAS CASERAS</span><span>🤌 PARA PICAR</span>
     </div>
   </div>
 
@@ -169,33 +176,117 @@
   </section>
 
   <!-- ══════════════════════════════════════
-       SECCIÓN 4 · ESPECIALIDADES
+       SECCIÓN 4 · TODA LA CARTA
   ══════════════════════════════════════ -->
   <section class="especialidades" id="especialidades">
     <div class="esp-header reveal">
-      <h2>Lo que <em>nos hace</em><br />diferentes</h2>
+      <p class="section-tag">— Para todos los gustos —</p>
+      <h2>Todo lo que<br /><em>tenemos</em></h2>
     </div>
-    <div class="esp-grid">
+    <div class="esp-grid esp-grid--full">
+
       <div class="esp-card reveal" style="--d:0s">
-        <div class="esp-card-icon">🍕</div>
-        <h3>Pizzas Artesanas</h3>
-        <p>Masa elaborada a diario, ingredientes frescos. El sabor italiano con el alma andaluza.</p>
+        <div class="esp-card-icon">🤌</div>
+        <h3>Para Picar</h3>
+        <p>Los mejores aperitivos para abrir boca. Perfectos para compartir en mesa.</p>
       </div>
+
+      <div class="esp-card reveal" style="--d:.05s">
+        <div class="esp-card-icon">🥖</div>
+        <h3>Baguettes</h3>
+        <p>Baguettes crujientes rellenas con combinaciones únicas. Pan recién horneado.</p>
+      </div>
+
       <div class="esp-card reveal" style="--d:.1s">
         <div class="esp-card-icon">🍔</div>
         <h3>Hamburguesas</h3>
-        <p>Carne jugosa, salsas propias y pan brioche. Una experiencia que repites.</p>
+        <p>Carne jugosa, salsas propias y pan con semillas. Una experiencia que repites.</p>
       </div>
-      <div class="esp-card reveal" style="--d:.2s">
-        <div class="esp-card-icon">🥪</div>
-        <h3>Montaditos & Baguettes</h3>
-        <p>Bocados únicos con combinaciones que sorprenden. Perfectos para compartir.</p>
-      </div>
-      <div class="esp-card reveal" style="--d:.3s">
+
+      <div class="esp-card reveal" style="--d:.15s">
         <div class="esp-card-icon">🌭</div>
-        <h3>Perritos & Más</h3>
-        <p>Para todos los gustos y todos los bolsillos. Family es para toda la familia.</p>
+        <h3>Perritos</h3>
+        <p>Clásicos y especiales. El perrito que siempre quisiste encontrar en tu pueblo.</p>
       </div>
+
+      <div class="esp-card reveal" style="--d:.2s">
+        <div class="esp-card-icon">🫓</div>
+        <h3>Sandwiches</h3>
+        <p>Combinaciones generosas, ingredientes frescos y un toque Family inconfundible.</p>
+      </div>
+
+      <div class="esp-card reveal" style="--d:.25s">
+        <div class="esp-card-icon">🥪</div>
+        <h3>Montaditos</h3>
+        <p>El bocado andaluz por excelencia. Pequeños, sabrosos e irresistibles.</p>
+      </div>
+
+      <div class="esp-card reveal" style="--d:.3s">
+        <div class="esp-card-icon">🍕</div>
+        <h3>Pizzas Artesanas</h3>
+        <p>Masa elaborada a diario, ingredientes frescos. Sabor italiano con alma andaluza.</p>
+      </div>
+
+      <div class="esp-card reveal" style="--d:.35s">
+        <div class="esp-card-icon">🍟</div>
+        <h3>Patatas Fritas</h3>
+        <p>Crujientes por fuera, tiernas por dentro. El acompañamiento perfecto.</p>
+      </div>
+
+      <div class="esp-card reveal" style="--d:.4s">
+        <div class="esp-card-icon">🧒</div>
+        <h3>Menús Infantiles</h3>
+        <p>Pensados para los más pequeños. Porque Family es para toda la familia.</p>
+      </div>
+
+      <div class="esp-card esp-card--highlight reveal" style="--d:.45s">
+        <div class="esp-card-icon">🫙</div>
+        <h3>Salsas Caseras</h3>
+        <p>Ocho salsas únicas, todas elaboradas en casa. La estrella: la legendaria <strong>Salsa Family</strong>.</p>
+      </div>
+
+      <div class="esp-card reveal" style="--d:.5s">
+        <div class="esp-card-icon">🥩</div>
+        <h3>Churrascos y Platos Combinados</h3>
+        <p>Para cuando el hambre es de verdad. Raciones contundentes y llenas de sabor.</p>
+      </div>
+
+      <div class="esp-card reveal" style="--d:.55s">
+        <div class="esp-card-icon">🥗</div>
+        <h3>Ensaladas</h3>
+        <p>Frescas, variadas y bien aliñadas. La opción ligera que no renuncia al sabor.</p>
+      </div>
+
+      <div class="esp-card reveal" style="--d:.6s">
+        <div class="esp-card-icon">🫔</div>
+        <h3>Durum Kebabs</h3>
+        <p>Crujientes por fuera, jugosos por dentro. Un clásico que nunca falla.</p>
+      </div>
+
+      <div class="esp-card reveal" style="--d:.65s">
+        <div class="esp-card-icon">🌮</div>
+        <h3>Platos Mexicanos</h3>
+        <p>Un toque de México en Huévar. Sabores intensos con el sello Family.</p>
+      </div>
+
+      <div class="esp-card reveal" style="--d:.7s">
+        <div class="esp-card-icon">🍰</div>
+        <h3>Postres</h3>
+        <p>El broche dulce perfecto. Porque una buena comida siempre merece un final feliz.</p>
+      </div>
+
+      <div class="esp-card reveal" style="--d:.75s">
+        <div class="esp-card-icon">🥤</div>
+        <h3>Bebidas</h3>
+        <p>Refrescos, cervezas y más. Todo lo que necesitas para acompañar tu pedido.</p>
+      </div>
+
+    </div>
+
+    <div class="esp-cta reveal">
+      <a href="https://www.selfibar.com/digital-menu/pizzeriafamily/home" target="_blank" rel="noopener" class="btn btn--primary btn--large">
+        Ver la carta completa →
+      </a>
     </div>
   </section>
 

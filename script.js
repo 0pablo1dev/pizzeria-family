@@ -14,26 +14,40 @@ window.addEventListener('load', () => {
   }, 1500);
 });
 
-// ── CURSOR PERSONALIZADO ─────────────────────────────
-const cursor   = document.getElementById('cursor');
-const follower = document.getElementById('cursorFollower');
+// ── CURSOR PIZZA ─────────────────────────────────────
+const pizzaCursor = document.getElementById('pizza-cursor');
 
-if (cursor && follower) {
-  let mx = 0, my = 0, fx = 0, fy = 0;
+if (pizzaCursor && window.matchMedia('(pointer:fine)').matches) {
+  let cx = -100, cy = -100;
+  let angle = 0;
 
   document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    cursor.style.left = mx + 'px';
-    cursor.style.top  = my + 'px';
+    cx = e.clientX;
+    cy = e.clientY;
+    pizzaCursor.style.left = cx + 'px';
+    pizzaCursor.style.top  = cy + 'px';
   });
 
-  (function animFollower() {
-    fx += (mx - fx) * 0.12;
-    fy += (my - fy) * 0.12;
-    follower.style.left = fx + 'px';
-    follower.style.top  = fy + 'px';
-    requestAnimationFrame(animFollower);
+  // Rotación suave continua
+  (function rotatePizza() {
+    angle += 0.6;
+    pizzaCursor.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
+    requestAnimationFrame(rotatePizza);
   })();
+
+  // Agrandar al hover de interactivos
+  document.querySelectorAll('a, button, .gal-placeholder, .esp-card, .trabaja-card, .salsa-chip').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      pizzaCursor.style.fontSize = '38px';
+      pizzaCursor.style.filter = 'drop-shadow(0 0 8px rgba(232,35,26,.8))';
+    });
+    el.addEventListener('mouseleave', () => {
+      pizzaCursor.style.fontSize = '26px';
+      pizzaCursor.style.filter = 'none';
+    });
+  });
+} else if (pizzaCursor) {
+  pizzaCursor.style.display = 'none';
 }
 
 // ── NAV SCROLL ───────────────────────────────────────
@@ -155,25 +169,7 @@ galItems.forEach(item => {
   });
 });
 
-// ── HOVER en links: agrandar cursor follower ──────────
-const interactives = document.querySelectorAll('a, button, .gal-placeholder, .esp-card, .trabaja-card');
-
-interactives.forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    if (follower) {
-      follower.style.width  = '56px';
-      follower.style.height = '56px';
-      follower.style.borderColor = 'rgba(232,35,26,.7)';
-    }
-  });
-  el.addEventListener('mouseleave', () => {
-    if (follower) {
-      follower.style.width  = '34px';
-      follower.style.height = '34px';
-      follower.style.borderColor = 'rgba(232,35,26,.5)';
-    }
-  });
-});
+// ── HOVER en links: ya gestionado en cursor pizza ──────────
 
 // ── CHECKER PATTERN — velocidad alternada en marquee ─
 // (ya se maneja con CSS, esto es por si se quiere pausar al hover)

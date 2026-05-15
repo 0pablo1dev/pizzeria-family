@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pizzería Family – Huévar del Aljarafe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════ CURSOR PERSONALIZADO ══════════ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ══════════ LOADER ══════════ -->
+  <div class="loader" id="loader">
+    <div class="loader-checker"></div>
+    <div class="loader-content">
+      <span class="loader-text">PIZZERÍA</span>
+      <span class="loader-text loader-text--big">FAMILY</span>
+      <span class="loader-text loader-sub">Huévar del Aljarafe · Desde el corazón de Andalucía</span>
+    </div>
+  </div>
+
+  <!-- ══════════ NAV ══════════ -->
+  <nav class="nav" id="nav">
+    <a href="#home" class="nav-logo" data-nav>
+      <span class="nav-logo-pizza">🍕</span>
+      <span>FAMILY</span>
+    </a>
+    <button class="nav-burger" id="navBurger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ══════════ MENÚ LATERAL ══════════ -->
+  <div class="side-menu" id="sideMenu">
+    <div class="side-menu-checker"></div>
+    <nav class="side-menu-nav">
+      <a href="#home"        class="side-link" data-close>Inicio</a>
+      <a href="#carta"       class="side-link" data-close>La Carta</a>
+      <a href="#galeria"     class="side-link" data-close>Galería</a>
+      <a href="#nosotros"    class="side-link" data-close>Nosotros</a>
+      <a href="#trabaja"     class="side-link" data-close>Trabaja con Nosotros</a>
+      <a href="#contacto"    class="side-link" data-close>Contacto</a>
+    </nav>
+    <div class="side-menu-footer">
+      <p>Calle Principal, Huévar del Aljarafe</p>
+      <p>Sevilla, Andalucía</p>
+      <div class="side-socials">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="WhatsApp">WA</a>
+      </div>
+    </div>
+  </div>
+  <div class="side-overlay" id="sideOverlay"></div>
+
+  <!-- ══════════════════════════════════════
+       SECCIÓN 1 · HOME / HERO
+  ══════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-checker-bg"></div>
+    <div class="hero-noise"></div>
+
+    <div class="hero-content">
+      <p class="hero-tag reveal">— Huévar del Aljarafe · Sevilla —</p>
+      <h1 class="hero-title reveal">
+        <span class="hero-title-line">PIZZERÍA</span>
+        <span class="hero-title-line hero-title-line--italic">Family</span>
+      </h1>
+      <p class="hero-sub reveal">
+        Pizza, hamburguesas, montaditos, baguettes, perritos…<br />
+        <strong>Sabor andaluz de verdad.</strong>
+      </p>
+      <div class="hero-ctas reveal">
+        <a href="https://www.selfibar.com/digital-menu/pizzeriafamily/home" target="_blank" rel="noopener" class="btn btn--primary">
+          Ver la Carta
+        </a>
+        <a href="#nosotros" class="btn btn--ghost">Quiénes somos</a>
+      </div>
+    </div>
+
+    <div class="hero-badge reveal">
+      <span>OPEN</span>
+      <span>NOW</span>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SECCIÓN 2 · MARQUEE
+  ══════════════════════════════════════ -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>🍕 PIZZA</span><span>🍔 BURGER</span><span>🥖 BAGUETTE</span>
+      <span>🌭 PERRITO</span><span>🥪 MONTADITO</span><span>🍟 PATATAS</span>
+      <span>🥤 BEBIDAS</span><span>🍕 PIZZA</span><span>🍔 BURGER</span>
+      <span>🥖 BAGUETTE</span><span>🌭 PERRITO</span><span>🥪 MONTADITO</span>
+      <span>🍟 PATATAS</span><span>🥤 BEBIDAS</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       SECCIÓN 3 · LA CARTA (CTA grande)
+  ══════════════════════════════════════ -->
+  <section class="carta-cta" id="carta">
+    <div class="carta-cta-inner">
+      <div class="carta-cta-text reveal">
+        <h2>Nuestra<br /><em>Carta</em></h2>
+        <p>Toda la variedad que te imaginas y más. Desde las mejores pizzas artesanas hasta hamburguesas que no te puedes perder. Para comer aquí, para llevar, para lo que quieras.</p>
+        <a href="https://www.selfibar.com/digital-menu/pizzeriafamily/home" target="_blank" rel="noopener" class="btn btn--primary btn--large">
+          Abrir Carta Digital →
+        </a>
+      </div>
+      <div class="carta-cta-visual reveal">
+        <div class="carta-checker-card">
+          <div class="carta-checker-pattern"></div>
+          <div class="carta-checker-label">
+            <span>MENÚ</span>
+            <span>DIGITAL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SECCIÓN 4 · ESPECIALIDADES
+  ══════════════════════════════════════ -->
+  <section class="especialidades" id="especialidades">
+    <div class="esp-header reveal">
+      <h2>Lo que <em>nos hace</em><br />diferentes</h2>
+    </div>
+    <div class="esp-grid">
+      <div class="esp-card reveal" style="--d:0s">
+        <div class="esp-card-icon">🍕</div>
+        <h3>Pizzas Artesanas</h3>
+        <p>Masa elaborada a diario, ingredientes frescos. El sabor italiano con el alma andaluza.</p>
+      </div>
+      <div class="esp-card reveal" style="--d:.1s">
+        <div class="esp-card-icon">🍔</div>
+        <h3>Hamburguesas</h3>
+        <p>Carne jugosa, salsas propias y pan brioche. Una experiencia que repites.</p>
+      </div>
+      <div class="esp-card reveal" style="--d:.2s">
+        <div class="esp-card-icon">🥪</div>
+        <h3>Montaditos & Baguettes</h3>
+        <p>Bocados únicos con combinaciones que sorprenden. Perfectos para compartir.</p>
+      </div>
+      <div class="esp-card reveal" style="--d:.3s">
+        <div class="esp-card-icon">🌭</div>
+        <h3>Perritos & Más</h3>
+        <p>Para todos los gustos y todos los bolsillos. Family es para toda la familia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SECCIÓN 5 · GALERÍA
+  ══════════════════════════════════════ -->
+  <section class="galeria" id="galeria">
+    <div class="galeria-header reveal">
+      <p class="section-tag">— Galería —</p>
+      <h2>El ambiente<br /><em>Family</em></h2>
+    </div>
+
+    <div class="galeria-grid">
+      <!-- Tarjetas de galería con emojis / placeholders visuales -->
+      <div class="gal-item gal-item--wide reveal" style="--d:0s">
+        <div class="gal-placeholder" style="--bg:#1a0a00">
+          <span class="gal-emoji">🍕</span>
+          <p>Nuestras pizzas</p>
+        </div>
+      </div>
+      <div class="gal-item reveal" style="--d:.1s">
+        <div class="gal-placeholder" style="--bg:#1a0000">
+          <span class="gal-emoji">🍔</span>
+          <p>Hamburguesas</p>
+        </div>
+      </div>
+      <div class="gal-item reveal" style="--d:.15s">
+        <div class="gal-placeholder" style="--bg:#0d0d0d">
+          <span class="gal-emoji">🥪</span>
+          <p>Montaditos</p>
+        </div>
+      </div>
+      <div class="gal-item reveal" style="--d:.2s">
+        <div class="gal-placeholder" style="--bg:#1a0800">
+          <span class="gal-emoji">🌭</span>
+          <p>Perritos</p>
+        </div>
+      </div>
+      <div class="gal-item gal-item--wide reveal" style="--d:.25s">
+        <div class="gal-placeholder" style="--bg:#0a0a1a">
+          <span class="gal-emoji">🏠</span>
+          <p>Nuestro local</p>
+        </div>
+      </div>
+      <div class="gal-item reveal" style="--d:.3s">
+        <div class="gal-placeholder" style="--bg:#1a0a0a">
+          <span class="gal-emoji">🥤</span>
+          <p>Bebidas</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="galeria-note reveal">📸 ¿Quieres ver tu foto aquí? Etiquétanos en Instagram</p>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SECCIÓN 6 · NOSOTROS
+  ══════════════════════════════════════ -->
+  <section class="nosotros" id="nosotros">
+    <div class="nosotros-checker"></div>
+    <div class="nosotros-content">
+      <div class="nosotros-text reveal">
+        <p class="section-tag">— Sobre Nosotros —</p>
+        <h2>Una historia<br />hecha con<br /><em>pasión</em></h2>
+        <p>Pizzería Family nació en el corazón de Huévar del Aljarafe con una misión clara: ofrecer comida de calidad, hecha con cariño, a precios honestos. Somos un negocio familiar andaluz, de los de toda la vida, pero con ideas frescas.</p>
+        <p>Desde la pizza más tradicional hasta la hamburguesa más atrevida, cada plato lleva el sello de quien lo cocina con orgullo. Aquí no hay atajos: hay ingredientes buenos, manos expertas y mucho amor por lo que hacemos.</p>
+        <div class="nosotros-stats">
+          <div class="stat reveal" style="--d:0s">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Casero</span>
+          </div>
+          <div class="stat reveal" style="--d:.1s">
+            <span class="stat-num">♥</span>
+            <span class="stat-label">Familia</span>
+          </div>
+          <div class="stat reveal" style="--d:.2s">
+            <span class="stat-num">LOCAL</span>
+            <span class="stat-label">Andaluz</span>
+          </div>
+        </div>
+      </div>
+      <div class="nosotros-visual reveal">
+        <div class="nos-card">
+          <div class="nos-card-checker"></div>
+          <div class="nos-card-text">
+            <span>PIZZERÍA</span>
+            <span class="nos-card-big">FAMILY</span>
+            <span>Huévar del Aljarafe</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SECCIÓN 7 · TRABAJA CON NOSOTROS
+  ══════════════════════════════════════ -->
+  <section class="trabaja" id="trabaja">
+    <div class="trabaja-inner reveal">
+      <p class="section-tag">— Únete al equipo —</p>
+      <h2>¿Quieres ser<br />parte de la<br /><em>Family?</em></h2>
+      <p>Buscamos personas con ganas, buen rollo y amor por la comida. Si te gustaría trabajar con nosotros, escríbenos. Somos un equipo pequeño, cercano y con mucha energía.</p>
+
+      <div class="trabaja-cards">
+        <div class="trabaja-card reveal" style="--d:0s">
+          <div class="tc-icon">👨‍🍳</div>
+          <h3>Cocinero/a</h3>
+          <p>Experiencia en cocina rápida. Pasión por los ingredientes frescos.</p>
+        </div>
+        <div class="trabaja-card reveal" style="--d:.1s">
+          <div class="tc-icon">🛵</div>
+          <h3>Repartidor/a</h3>
+          <p>Vehículo propio. Responsabilidad y buen trato al cliente.</p>
+        </div>
+        <div class="trabaja-card reveal" style="--d:.2s">
+          <div class="tc-icon">😊</div>
+          <h3>Atención al público</h3>
+          <p>Don de gentes, energía positiva y ganas de crecer.</p>
+        </div>
+      </div>
+
+      <a href="mailto:family@ejemplo.com" class="btn btn--primary btn--large">
+        Envíanos tu CV →
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SECCIÓN 8 · CONTACTO / FOOTER
+  ══════════════════════════════════════ -->
+  <section class="contacto" id="contacto">
+    <div class="contacto-inner">
+      <div class="contacto-info reveal">
+        <p class="section-tag">— Encuéntranos —</p>
+        <h2>Ven a<br /><em>vernos</em></h2>
+
+        <div class="contacto-datos">
+          <div class="dato">
+            <span class="dato-icon">📍</span>
+            <div>
+              <strong>Dirección</strong>
+              <p>Calle Principal, Huévar del Aljarafe, Sevilla</p>
+            </div>
+          </div>
+          <div class="dato">
+            <span class="dato-icon">🕐</span>
+            <div>
+              <strong>Horario</strong>
+              <p>Lun–Vie: 12:00–16:00 · 19:00–23:30<br />
+                 Sáb–Dom: 12:00–23:30</p>
+            </div>
+          </div>
+          <div class="dato">
+            <span class="dato-icon">📞</span>
+            <div>
+              <strong>Teléfono</strong>
+              <p><a href="tel:+34600000000">+34 600 000 000</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contacto-socials">
+          <a href="#" class="social-btn">Instagram</a>
+          <a href="#" class="social-btn">Facebook</a>
+          <a href="#" class="social-btn">WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="contacto-map reveal">
+        <div class="map-placeholder">
+          <div class="map-checker-mini"></div>
+          <div class="map-text">
+            <span>📍</span>
+            <strong>Huévar del Aljarafe</strong>
+            <p>Sevilla, Andalucía</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span>🍕</span>
+        <span>PIZZERÍA FAMILY</span>
+      </div>
+      <p class="footer-copy">© 2025 Pizzería Family · Huévar del Aljarafe, Sevilla · Hecho con ❤️ en Andalucía</p>
+      <a href="https://www.selfibar.com/digital-menu/pizzeriafamily/home" target="_blank" rel="noopener" class="footer-carta-btn">Ver Carta Digital</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1185,7 +1185,7 @@ body { cursor: none; }
 
 .horario-fila:last-child { border-bottom: none; }
 
-.horario-extra span:last-child { color: rgba(245,240,235,.45); font-size: .72rem; }
+/*.horario-extra span:last-child { color: rgba(245,240,235,.45); font-size: .72rem; }*/
 
 .horario-cerrado span { color: rgba(245,240,235,.3); }
 .horario-cerrado span:last-child { color: rgba(232,35,26,.5); }

@@ -292,8 +292,10 @@ body { cursor: none; }
   position: relative;
   min-height: 100svh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 8rem 2rem 4rem;
+  justify-content: center;
+  padding: 5rem 2rem 3rem;
   overflow: hidden;
 }
 
@@ -1141,7 +1143,7 @@ body { cursor: none; }
 .hero-logo-wrap {
   display: flex;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: .2rem;
   filter: drop-shadow(0 0 40px rgba(232,35,26,.25));
   animation: logoFloat 6s ease-in-out infinite;
 }
@@ -1152,12 +1154,9 @@ body { cursor: none; }
 }
 
 .hero-logo {
-  width: clamp(220px, 40vw, 420px);
+  width: clamp(320px, 58vw, 620px);
   height: auto;
   display: block;
-  /* El logo tiene fondo blanco en la zona de texto, usamos mix-blend-mode
-     para que el texto blanco del logo "FAMILY" resalte sobre el fondo oscuro */
-  mix-blend-mode: normal;
 }
 
 /* ─── NAV LOGO CON IMAGEN ─── */
@@ -1180,10 +1179,9 @@ body { cursor: none; }
 
 /* ─── HERO HORARIO ─── */
 .hero-horario {
-  position: absolute;
-  right: 3%;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 .horario-inner {
@@ -1191,8 +1189,10 @@ body { cursor: none; }
   backdrop-filter: blur(14px);
   border: 1px solid rgba(232,35,26,.3);
   border-top: 3px solid var(--red);
-  padding: 1.4rem 1.6rem;
-  min-width: 200px;
+  padding: 1.2rem 2rem;
+  min-width: 260px;
+  max-width: 360px;
+  width: 100%;
 }
 
 .horario-titulo {
@@ -1430,22 +1430,6 @@ body { cursor: none; }
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 900px) {
-  .hero-horario {
-    position: static;
-    transform: none;
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-  }
-
-  .horario-inner {
-    max-width: 320px;
-    width: 100%;
-    /* en móvil hacemos el grid horizontal para que quepa mejor */
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
   .salsa-star-inner { grid-template-columns: 1fr; gap: 3rem; }
 
   .salsa-star-text { order: 1; }

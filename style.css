@@ -231,15 +231,16 @@ body { cursor: none; }
   flex-direction: column;
   gap: .2rem;
   position: relative;
+  margin-bottom: 2.5rem;
 }
 
 .side-link {
   font-family: var(--font-display);
-  font-size: clamp(1.6rem, 5vw, 2.2rem);
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
   font-weight: 700;
   font-style: italic;
   color: var(--white);
-  padding: .5rem 0;
+  padding: .4rem 0;
   border-bottom: 1px solid rgba(245,240,235,.1);
   transition: color .2s, padding-left .3s var(--ease-out);
   cursor: none;
@@ -1091,6 +1092,127 @@ body { cursor: none; }
   font-size: .8rem;
   color: rgba(245,240,235,.45);
   letter-spacing: .1em;
+}
+
+/* ─── TABLÓN DE ANUNCIOS ─── */
+.tablon {
+  padding: 7rem 2rem;
+  background: var(--gray);
+  position: relative;
+  overflow: hidden;
+}
+
+.tablon::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    repeating-conic-gradient(rgba(232,35,26,.05) 0% 25%, transparent 0% 50%);
+  background-size: 70px 70px;
+  pointer-events: none;
+}
+
+.tablon-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.tablon-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.tablon-header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.tablon-header h2 em { font-style: italic; color: var(--red); }
+
+.tablon-intro {
+  font-size: .9rem;
+  color: rgba(245,240,235,.5);
+  line-height: 1.75;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.tablon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+.anuncio-card {
+  background: var(--black);
+  border: 1px solid rgba(245,240,235,.07);
+  border-top: 3px solid rgba(245,240,235,.2);
+  padding: 1.6rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  transition: transform .3s var(--ease-out), border-top-color .3s, box-shadow .3s;
+}
+
+.anuncio-card:hover {
+  transform: translateY(-6px);
+  border-top-color: var(--red);
+  box-shadow: 0 16px 36px rgba(0,0,0,.3);
+}
+
+.anuncio-card--oferta {
+  border-top-color: var(--red);
+  background: linear-gradient(135deg, #1a0500, var(--black));
+}
+
+.anuncio-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.anuncio-emoji { font-size: 1.6rem; }
+
+.anuncio-fecha {
+  font-family: var(--font-bebas);
+  font-size: .72rem;
+  letter-spacing: .15em;
+  color: rgba(245,240,235,.3);
+}
+
+.anuncio-titulo {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.3;
+}
+
+.anuncio-texto {
+  font-size: .85rem;
+  color: rgba(245,240,235,.55);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.anuncio-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--font-bebas);
+  font-size: .7rem;
+  letter-spacing: .15em;
+  padding: .25rem .7rem;
+  border: 1px solid rgba(245,240,235,.15);
+  color: rgba(245,240,235,.4);
+}
+
+.anuncio-tag--oferta {
+  border-color: rgba(232,35,26,.5);
+  color: var(--red);
 }
 
 /* ─── ALÉRGENOS ─── */

@@ -1215,6 +1215,16 @@ body { cursor: none; }
   color: var(--red);
 }
 
+.tablon-vacio {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: rgba(245,240,235,.3);
+  padding: 3rem 0;
+}
+
 /* ─── ALÉRGENOS ─── */
 .alergenos {
   padding: 7rem 2rem;
